@@ -5,7 +5,7 @@ import { theme } from './utils/theme.utils'
 import ErrorBoundary from './ErrorBoundary'
 import { Navigation } from './components'
 import Footer from './components/Footer/Footer'
-import DashboardLayout from './layout/DashboardLayout'
+// import DashboardLayout from './layout/DashboardLayout'
 
 export default function Root() {
 	return (
@@ -18,12 +18,12 @@ export default function Root() {
 
 				{/* Recommend to use  ErrorBoundary to the specific section*/}
 				<ErrorBoundary>
-					<Box component="section" minHeight="60vh">
+					<Box sx={{ flex: 1, p: 2, minHeight: "calc(100vh - 64px - 64px)" }}>
 						<Routes>
 							{configureRoute(MAIN_ROUTES)}
 
 							{/* dashboard nested routes */}
-							<Route path="dashboard" element={<DashboardLayout />}>
+							<Route path="dashboard" element={<div>Dashboard Layout</div>}>
 								{configureRoute(DASHBOARD_NESTED_ROUTES)}
 							</Route>
 						</Routes>

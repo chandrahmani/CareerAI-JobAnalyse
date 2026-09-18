@@ -9,8 +9,8 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+// import ListItemButton from '@mui/material/ListItemButton';
+// import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { DASHBOARD_NESTED_ROUTES, MAIN_ROUTES } from '../../config/router.config';
@@ -46,7 +46,7 @@ export default function Navigation() {
 
 
   return (
-    <Box sx={{ display: 'flex' }} mb={8} data-testid="navigation">
+    <Box sx={{ display: 'flex', marginBottom: 8 , }}>
       <CssBaseline />
       <AppBar component="nav" color='primary'>
         <Toolbar>
@@ -64,7 +64,7 @@ export default function Navigation() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            ReactTW
+            Career Ai
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map(({name, title, path}) => (
