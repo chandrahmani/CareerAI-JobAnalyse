@@ -2,7 +2,7 @@ import {
   Avatar,
   Box,
   Button,
-  Grid2 as Grid,
+  Grid,
   Paper,
   Typography,
 } from "@mui/material";
@@ -59,7 +59,7 @@ function Profile() {
           textAlign: "center",
         }}
       >
-        <Grid container spacing={3} justifyContent="center">
+        <Grid sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           {/* Avatar Section */}
           <Grid size={12}>
             <Avatar
